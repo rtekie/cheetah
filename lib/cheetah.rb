@@ -25,7 +25,7 @@ module Cheetah
     #   :aid              => '67890'                  # the 'affiliate id'
     #   :whitelist_filter => //                       # if set, emails will only be sent to addresses which match this pattern
     #   :enable_tracking  => true                     # determines whether cheetahmail will track the sending of emails for analytics purposes
-    #   :messenger        => Cheetah::ResqueMessenger
+    #   :messenger        => Cheetah::SynchronousMessenger
     # }
     def initialize(options)
       @messenger = options[:messenger].new(options)
